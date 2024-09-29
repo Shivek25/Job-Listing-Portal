@@ -39,7 +39,7 @@ const Jobs = () => {
                     {
                         filterJobs.length <= 0 ? <span>Job not found</span> : (
                             <div className='flex-1 h-[86vh] overflow-y-auto pb-5 pr-3'>
-                                <div className='grid grid-cols-3 gap-4'>
+                                <div className='grid grid-cols-3 gap-6'>
                                     {
                                         filterJobs.map((job) => (
                                             <div key={job?._id}>

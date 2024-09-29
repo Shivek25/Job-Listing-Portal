@@ -1,31 +1,28 @@
-import express from "express";
+import express, { urlencoded } from "express";
+import connectDB from "./utils/db.js";
+import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
-import dotenv from "dotenv";
-import connectDB from "./utils/db.js";
+import bodyParser from "body-parser";
 import userRoute from "./routes/user.route.js";
 import companyRoute from "./routes/company.route.js";
 import jobRoute from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
-import path from "path";
+// import path from "path";
 
-dotenv.config({});
-const PORT = process.env.PORT || 3000;
+dotenv.config();
 
-const _dirname = path.resolve();
-
+connectDB();
+const PORT = process.env.PORT || 8080;
 const app = express();
 
-// app.get("/home", (req, res)=>{
-//     return res.status(200).json({
-//         message:"I have came from backend",
-//         success:true
-//     })
-// });
+// const _dirname = path.resolve();
+
 
 //Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
@@ -41,13 +38,12 @@ app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
 
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
-app.get('*', (_, res) => {
-    res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
-});
+// app.use(express.static(path.join(_dirname, "/frontend/dist")));
+// app.get('*', (_, res) => {
+//     res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
+// });
 
 
 app.listen(PORT, () => {
-    connectDB()
     console.log(`Server running at port ${PORT}`)
-})
+});
