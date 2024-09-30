@@ -4,7 +4,7 @@ This Job Listing Portal is a full-stack web application built using the **MERN**
 ## Deployed website link:
 https://jobsphere-rk8q.onrender.com
 
-It's a free server, so getting responses from backend server will be slow. Currently, this Jobsphere is not made for Mobile devices so please open the link in desktop/desktop mode.
+It's a free server, so getting responses from backend server will be slow. Currently, Jobsphere is not made for Mobile devices so please open the link in desktop/desktop mode.
 
 
 ## Features
