@@ -1,7 +1,7 @@
 # Job Listing Portal
 This project is a full-stack job listing platform built using the MERN stack (MongoDB, Express, React, Node.js). It provides features for both job seekers and reruiters.
 
-# Deployed website link:
+## Deployed website link:
 https://jobsphere-rk8q.onrender.com
 
 
