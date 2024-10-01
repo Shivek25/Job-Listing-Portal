@@ -9,6 +9,8 @@ It's a free server, so getting responses from backend server will be slow. Curre
 ### Working Project Video Link:
 https://drive.google.com/file/d/1-DluJKVXUaDQEkQSQJ677X41TZhSj-JR/view?usp=sharing
 
+(Video is in 2x speed)
+
 ## Features
 
 - User authentication for employers and job seekers.
